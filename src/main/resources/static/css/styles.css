@@ -1,0 +1,338 @@
+/* 🎨 Java Learning App Styles - Simple B&W Design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ヘッダー */
+.header {
+    text-align: center;
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* タブナビゲーション */
+.tabs {
+    display: flex;
+    border: 1px solid #ccc;
+    margin-bottom: 0;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 12px 16px;
+    background: #f5f5f5;
+    border: none;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.tab-button:last-child {
+    border-right: none;
+}
+
+.tab-button:hover {
+    background: #e5e5e5;
+}
+
+.tab-button.active {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+}
+
+/* タブコンテンツ */
+.tab-content {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.card {
+    padding: 20px;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* フォーム */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #000;
+}
+
+.form-group input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #000;
+}
+
+/* ボタン */
+.btn {
+    padding: 8px 16px;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.btn-primary {
+    background: #000;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #333;
+}
+
+.btn-secondary {
+    background: #f5f5f5;
+    border-color: #999;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background: #e5e5e5;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 結果表示 */
+.result {
+    margin-top: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-weight: 500;
+}
+
+.result.success {
+    background: #f9f9f9;
+    color: #000;
+}
+
+.result.error {
+    background: #f9f9f9;
+    color: #000;
+    border-color: #000;
+}
+
+.result pre {
+    background: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    font-family: 'Courier New', monospace;
+}
+
+/* ユーザー一覧 */
+.users-list {
+    margin-top: 15px;
+}
+
+.user-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-bottom: 8px;
+}
+
+.user-card:hover {
+    background: #f9f9f9;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.user-details {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.user-meta {
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* トースト通知 */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    max-width: 280px;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast.success {
+    background: #333;
+}
+
+.toast.error {
+    background: #000;
+}
+
+.toast.warning {
+    background: #666;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .tab-button:last-child {
+        border-bottom: none;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .card {
+        padding: 12px;
+    }
+    
+    .form-group input {
+        padding: 6px 10px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ローディング状態 */
+.btn.loading::after {
+    content: '...';
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    0%, 33% { content: '...'; }
+    34%, 66% { content: '....'; }
+    67%, 100% { content: '.....'; }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Learning App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Java Learning App</h1>
+            <p class="subtitle">プレーンJava + MySQL で作る Web アプリケーション</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('login')">ログイン</button>
+            <button class="tab-button" onclick="showTab('register')">新規登録</button>
+            <button class="tab-button" onclick="showTab('users')">ユーザー一覧</button>
+            <button class="tab-button" onclick="showTab('test')">API テスト</button>
+        </div>
+
+        <!-- ログインタブ -->
+        <div id="login" class="tab-content active">
+            <div class="card">
+                <h2>🔐 ログイン</h2>
+                <form id="loginForm" class="form">
+                    <div class="form-group">
+                        <label for="loginUsername">ユーザー名</label>
+                        <input type="text" id="loginUsername" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">パスワード</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">ログイン</button>
+                </form>
+                <div id="loginResult" class="result"></div>
+            </div>
+        </div>
+
+        <!-- 新規登録タブ -->
+        <div id="register" class="tab-content">
+            <div class="card">
+                <h2>📝 新規登録</h2>
+                <form id="registerForm" class="form">
+                    <div class="form-group">
+                        <label for="registerUsername">ユーザー名</label>
+                        <input type="text" id="registerUsername" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">メールアドレス</label>
+                        <input type="email" id="registerEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">パスワード</label>
+                        <input type="password" id="registerPassword" name="password" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="registerFirstName">姓</label>
+                            <input type="text" id="registerFirstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerLastName">名</label>
+                            <input type="text" id="registerLastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">登録</button>
+                </form>
+                <div id="registerResult" class="result"></div>
+            </div>
+        </div>
+
+        <!-- ユーザー一覧タブ -->
+        <div id="users" class="tab-content">
+            <div class="card">
+                <h2>👥 ユーザー一覧</h2>
+                <button id="loadUsersBtn" class="btn btn-secondary">ユーザー読み込み</button>
+                <div id="usersList" class="users-list"></div>
+            </div>
+        </div>
+
+        <!-- API テストタブ -->
+        <div id="test" class="tab-content">
+            <div class="card">
+                <h2>🔧 API テスト</h2>
+                <button id="testApiBtn" class="btn btn-secondary">API テスト実行</button>
+                <div id="apiResult" class="result"></div>
+            </div>
+        </div>
+
+        <!-- 成功・エラーメッセージ用のトースト -->
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
