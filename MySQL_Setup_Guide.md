@@ -139,7 +139,6 @@ SELECT * FROM user_sessions;
 ### Java アプリケーションでのテスト
 
 ```bash
-cd C:\Users\友利秀旭\Documents\git\java-learning-works
 mvn exec:java
 ```
 
