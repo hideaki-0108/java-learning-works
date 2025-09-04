@@ -38,3 +38,42 @@ Thumbs.db
 *.temp
 *~
 
+# Node.js / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+.pnpm-debug.log*
+
+# React / Vite build output
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker
+.docker/
+
+# MySQL data (if using local volumes)
+mysql_data/
+
+# Generated static files (built from frontend)
+TodoApp/src/main/resources/static/assets/
+TodoApp/src/main/resources/static/*.js
+TodoApp/src/main/resources/static/*.css
+TodoApp/src/main/resources/static/*.map
+
+# Package lock files (choose one based on preference)
+# package-lock.json
+# yarn.lock
+
+# IDE specific for frontend
+.vite/
+.cache/
